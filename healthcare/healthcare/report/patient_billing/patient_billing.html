@@ -1,0 +1,30 @@
+<!-- patient_billing.html -->
+<div class="report-container">
+    <h2>Patient Billing Report</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Invoice ID</th>
+                <th>Invoice Date</th>
+                <th>Patient</th>
+                <th>Service</th>
+                <th>Total Amount</th>
+                <th>Paid Amount</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr class="{{ row._css_class }}">
+                <td>{{ row.invoice_id }}</td>
+                <td>{{ row.invoice_date }}</td>
+                <td>{{ row.patient }}</td>
+                <td>{{ row.service }}</td>
+                <td>{{ row.total }}</td>
+                <td>{{ row.net_total }}</td>
+                <td>{{ row.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

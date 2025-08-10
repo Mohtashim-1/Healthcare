@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-28 17:03:05.866551",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "series",
+  "lab_test",
+  "laboratory",
+  "address",
+  "contact",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fetch_from": "series.lab_name",
+   "fieldname": "lab_test",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lab Test"
+  },
+  {
+   "fetch_from": "series.laboratory",
+   "fieldname": "laboratory",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Laboratory"
+  },
+  {
+   "fetch_from": "series.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fetch_from": "series.contact",
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fetch_from": "series.rate",
+   "fieldname": "rate",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rate"
+  },
+  {
+   "fieldname": "series",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "Laboratory Test Entry"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-28 17:26:32.768507",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Laboratory Test Entry Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,61 @@
+{
+ "_comments": "[{\"comment\": \"Action Failed<br><br>Module Welfare not found\", \"by\": \"Administrator\", \"name\": \"7c80319384\"}, {\"comment\": \"Action Failed<br><br>Module Welfare not found\", \"by\": \"Administrator\", \"name\": \"6a0a458403\"}]",
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-29 15:00:02.553764",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "surgery_name",
+  "speciality",
+  "hospital",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fetch_from": "surgery_name.speciality",
+   "fieldname": "speciality",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Speciality"
+  },
+  {
+   "fieldname": "surgery_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Surgery Name",
+   "options": "Surgery Assignment"
+  },
+  {
+   "fetch_from": "surgery_name.hospital",
+   "fieldname": "hospital",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hospital"
+  },
+  {
+   "fetch_from": "surgery_name.amount",
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-29 16:20:09.561946",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Surgery Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

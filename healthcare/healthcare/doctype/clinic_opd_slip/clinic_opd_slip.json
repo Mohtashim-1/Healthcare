@@ -1,0 +1,267 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-12 10:10:41.574677",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "series",
+  "company",
+  "posting_date",
+  "column_break_yghfy",
+  "owner_name",
+  "appointment_type",
+  "allow_booking_for",
+  "patient_section",
+  "patient",
+  "patient_name",
+  "gender",
+  "mobile",
+  "column_break_lipws",
+  "uid",
+  "blood_group",
+  "date_of_birth",
+  "healthcare_practitioner_section",
+  "healthcare_practitioner",
+  "practitioner_name",
+  "column_break_bjhau",
+  "department",
+  "payment_section",
+  "mode_of_payment",
+  "column_break_lj7ot",
+  "paid_amount",
+  "invoiced",
+  "amended_from",
+  "reference",
+  "opd_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "Token-.YYYY.-.MM.-.DD.-.{practitioner_name}.-",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yghfy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner_name",
+   "fieldtype": "Data",
+   "label": "Owner Name",
+   "options": "{{doc.owner}}",
+   "read_only": 1
+  },
+  {
+   "default": "Consultation",
+   "fieldname": "appointment_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Appointment Type",
+   "options": "Appointment Type",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "appointment_type.allow_booking_for",
+   "fieldname": "allow_booking_for",
+   "fieldtype": "Data",
+   "label": "Allow Booking For",
+   "options": "Appointment Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient_section",
+   "fieldtype": "Section Break",
+   "label": "Patient"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "patient.patient_name",
+   "fieldname": "patient_name",
+   "fieldtype": "Data",
+   "label": "Patient Name",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "column_break_lipws",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.uid",
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "UID",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.blood_group",
+   "fieldname": "blood_group",
+   "fieldtype": "Data",
+   "label": "Blood Group",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth",
+   "options": "Patient"
+  },
+  {
+   "fieldname": "payment_section",
+   "fieldtype": "Section Break",
+   "label": "Payment"
+  },
+  {
+   "default": "Cash",
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "label": "Mode of Payment",
+   "options": "Cash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Float",
+   "label": "Paid Amount",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "invoiced",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Invoiced"
+  },
+  {
+   "fieldname": "healthcare_practitioner_section",
+   "fieldtype": "Section Break",
+   "label": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "healthcare_practitioner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Healthcare Practitioner",
+   "options": "Healthcare Practitioner",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "healthcare_practitioner.practitioner_name",
+   "fieldname": "practitioner_name",
+   "fieldtype": "Data",
+   "label": "Practitioner Name",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fetch_from": "healthcare_practitioner.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department",
+   "options": "Healthcare Practitioner"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Clinic OPD Slip",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_lj7ot",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_date",
+   "fieldtype": "Datetime",
+   "label": "Posting Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bjhau",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "OPD Charges",
+   "fieldname": "opd_item",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "OPD Item",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Reference"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-22 16:17:45.769299",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Clinic OPD Slip",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

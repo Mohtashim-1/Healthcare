@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HMS-MWF-RS-{####}",
+ "creation": "2024-02-28 19:02:27.668591",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "mobile",
+  "uid",
+  "date_of_birth",
+  "gender",
+  "column_break_alqjd",
+  "radiology_centre",
+  "address",
+  "contact",
+  "section_break_0dgp5",
+  "radiology_item",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fetch_from": "patient.uid",
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "UID"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "radiology_item",
+   "fieldtype": "Table",
+   "label": "Radiology Item",
+   "options": "Radiology Item Child"
+  },
+  {
+   "fieldname": "column_break_alqjd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_0dgp5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "radiology_centre",
+   "fieldtype": "Link",
+   "label": "Radiology Centre",
+   "options": "Radiology Centre"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount"
+  },
+  {
+   "fetch_from": "radiology_centre.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fetch_from": "radiology_centre.contact",
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-28 20:35:37.127546",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Radiology Slip",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HMS-WF-LS-{####}",
+ "creation": "2024-02-28 17:05:05.532491",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_name",
+  "contact",
+  "date_of_birth",
+  "uid",
+  "column_break_l1nyj",
+  "laboratory",
+  "address",
+  "lab_contact",
+  "section_break_4f7ej",
+  "lab_test",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_name",
+   "fieldtype": "Link",
+   "label": "Patient Name",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient_name.dob",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date Of Birth"
+  },
+  {
+   "fetch_from": "patient_name.mobile",
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fetch_from": "patient_name.custom_uid",
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "UID"
+  },
+  {
+   "fieldname": "laboratory",
+   "fieldtype": "Link",
+   "label": "Laboratory",
+   "options": "Laboratory"
+  },
+  {
+   "fieldname": "column_break_l1nyj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_4f7ej",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "laboratory.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fetch_from": "laboratory.contact",
+   "fieldname": "lab_contact",
+   "fieldtype": "Data",
+   "label": "Lab Contact"
+  },
+  {
+   "fieldname": "lab_test",
+   "fieldtype": "Table",
+   "label": "Lab Test",
+   "options": "Laboratory Test Entry Child"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-28 17:55:18.038554",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Laboratory Slip",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

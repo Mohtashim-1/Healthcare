@@ -139,7 +139,8 @@
    "fieldtype": "Date",
    "in_preview": 1,
    "label": "Date of birth",
-   "no_copy": 1
+   "no_copy": 1,
+   "reqd": 1
   },
   {
    "fieldname": "age_html",
@@ -464,8 +465,7 @@
    "fieldname": "uid",
    "fieldtype": "Data",
    "in_standard_filter": 1,
-   "label": "Identification Number (UID)",
-   "unique": 1
+   "label": "Identification Number (UID)"
   },
   {
    "fieldname": "dashboard_tab",
@@ -489,10 +489,11 @@
  "image_field": "image",
  "links": [],
  "max_attachments": 50,
- "modified": "2023-01-13 17:48:59.069268",
+ "modified": "2025-01-10 10:53:38.003286",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Patient",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-28 19:06:31.898855",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "radiology_code",
+  "radiology_item",
+  "radiology_centre",
+  "address",
+  "contact",
+  "slices",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "radiology_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Radiology Code",
+   "options": "Radiology Item"
+  },
+  {
+   "fetch_from": "radiology_code.radiology_item",
+   "fieldname": "radiology_item",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Radiology Item"
+  },
+  {
+   "fetch_from": "radiology_code.radiology_centre",
+   "fieldname": "radiology_centre",
+   "fieldtype": "Data",
+   "label": "Radiology Centre"
+  },
+  {
+   "fetch_from": "radiology_code.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fetch_from": "radiology_code.contact",
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fetch_from": "radiology_code.slices",
+   "fieldname": "slices",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Slices"
+  },
+  {
+   "fetch_from": "radiology_code.rate",
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-28 20:07:36.910677",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Radiology Item Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

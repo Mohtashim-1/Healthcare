@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{radiology_item}-{#}",
+ "creation": "2024-02-28 18:49:05.506200",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "series",
+  "radiology_item",
+  "radiology_centre",
+  "address",
+  "column_break_ezcer",
+  "contact",
+  "slices",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "radiology_centre",
+   "fieldtype": "Link",
+   "label": "Radiology Centre",
+   "options": "Radiology Centre"
+  },
+  {
+   "fetch_from": "radiology_centre.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fetch_from": "radiology_centre.contact",
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "slices",
+   "fieldtype": "Data",
+   "label": "Slices"
+  },
+  {
+   "fieldname": "column_break_ezcer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "series",
+   "fieldtype": "Link",
+   "label": "Radiology Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "series.item_name",
+   "fieldname": "radiology_item",
+   "fieldtype": "Data",
+   "label": "Radiology Item"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Float",
+   "label": "rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-28 20:07:10.153408",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Radiology Item",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

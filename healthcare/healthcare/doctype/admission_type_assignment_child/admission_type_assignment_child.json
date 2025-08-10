@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HMS-WF-ATAC-{###}",
+ "creation": "2024-03-01 10:07:28.609704",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "admission_type",
+  "ward",
+  "column_break_trs1n",
+  "hospital",
+  "rate_per_day",
+  "admission_day_request",
+  "total_charges"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "admission_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Admission Type",
+   "options": "Admission Type Assignment"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "admission_type.ward",
+   "fieldname": "ward",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ward"
+  },
+  {
+   "columns": 1,
+   "fieldname": "column_break_trs1n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "admission_type.hospital",
+   "fieldname": "hospital",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hospital"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "admission_type.rate_per_day",
+   "fieldname": "rate_per_day",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rate (Per Day)"
+  },
+  {
+   "columns": 1,
+   "fieldname": "admission_day_request",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Admission Day Request ",
+   "options": "1\n2\n3\n30"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total_charges",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Charges"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-03 14:20:08.663735",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Admission Type Assignment Child",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

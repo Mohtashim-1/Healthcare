@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:HMS-WF-OPD-{####}",
+ "creation": "2024-02-28 15:46:30.456421",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "date_of_birth",
+  "contact",
+  "maritial_status",
+  "gender",
+  "doctor_column",
+  "doctor_name",
+  "speciality",
+  "days",
+  "time",
+  "column_break_licrs",
+  "hospital",
+  "hospital_contact",
+  "fees",
+  "hospital_address"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date of Birth"
+  },
+  {
+   "fetch_from": "patient.marital_status",
+   "fieldname": "maritial_status",
+   "fieldtype": "Data",
+   "label": "Maritial Status"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fieldname": "doctor_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Doctor Name"
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Data",
+   "label": "Days"
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time"
+  },
+  {
+   "fieldname": "hospital",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Hospital",
+   "options": "Hospital"
+  },
+  {
+   "fetch_from": "hospital.contact",
+   "fieldname": "hospital_contact",
+   "fieldtype": "Data",
+   "label": "Hospital Contact"
+  },
+  {
+   "fieldname": "fees",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Fees"
+  },
+  {
+   "fetch_from": "hospital.address",
+   "fieldname": "hospital_address",
+   "fieldtype": "Data",
+   "label": "Hospital Address"
+  },
+  {
+   "fieldname": "column_break_licrs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "doctor_name.speciality",
+   "fieldname": "speciality",
+   "fieldtype": "Link",
+   "label": "Speciality",
+   "options": "Speciality"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-04 11:10:39.790602",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "OPD Slip",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

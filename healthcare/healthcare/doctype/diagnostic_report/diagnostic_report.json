@@ -35,16 +35,14 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Patient",
-   "options": "Patient",
-   "read_only": 1
+   "options": "Patient"
   },
   {
    "fetch_from": "patient.patient_name",
    "fieldname": "patient_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Patient Name",
-   "read_only": 1
+   "label": "Patient Name"
   },
   {
    "fieldname": "column_break_v6l1",
@@ -56,8 +54,7 @@
    "hidden": 1,
    "in_standard_filter": 1,
    "label": "Ref DocType",
-   "options": "DocType",
-   "read_only": 1
+   "options": "DocType"
   },
   {
    "fieldname": "docname",
@@ -65,8 +62,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Ref DocName",
-   "options": "ref_doctype",
-   "read_only": 1
+   "options": "ref_doctype"
   },
   {
    "fieldname": "section_break_wtn1",
@@ -83,8 +79,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Gender",
-   "options": "Gender",
-   "read_only": 1
+   "options": "Gender"
   },
   {
    "fieldname": "naming_series",
@@ -105,21 +100,18 @@
    "label": "Amended From",
    "no_copy": 1,
    "options": "Diagnostic Report",
-   "print_hide": 1,
-   "read_only": 1
+   "print_hide": 1
   },
   {
    "fieldname": "age",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Age",
-   "read_only": 1
+   "label": "Age"
   },
   {
    "fieldname": "sales_invoice_status",
    "fieldtype": "Data",
-   "label": "Sales Invoice Status",
-   "read_only": 1
+   "label": "Sales Invoice Status"
   },
   {
    "fieldname": "practitioner",
@@ -127,49 +119,43 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Practitioner",
-   "options": "Healthcare Practitioner",
-   "read_only": 1
+   "options": "Healthcare Practitioner"
   },
   {
    "fetch_from": "practitioner.practitioner_name",
    "fieldname": "practitioner_name",
    "fieldtype": "Data",
-   "label": "Practitioner Name",
-   "read_only": 1
+   "label": "Practitioner Name"
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
    "in_standard_filter": 1,
    "label": "Company",
-   "options": "Company",
-   "read_only": 1
+   "options": "Company"
   },
   {
    "fieldname": "title",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Title",
-   "read_only": 1
+   "label": "Title"
   },
   {
    "fieldname": "reference_posting_date",
    "fieldtype": "Date",
-   "label": "Reference Posting Date",
-   "read_only": 1
+   "label": "Reference Posting Date"
   },
   {
    "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nPending Review\nPartially Approved\nApproved\nDisapproved",
-   "read_only": 1
+   "options": "Open\nPending Review\nPartially Approved\nApproved\nDisapproved"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-10-16 17:53:14.702170",
+ "modified": "2024-07-15 15:34:13.473749",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Diagnostic Report",

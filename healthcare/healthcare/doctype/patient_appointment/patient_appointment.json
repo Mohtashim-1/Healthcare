@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_import": 1,
- "autoname": "naming_series:",
+ "autoname": "naming_series:{naming_series}",
  "creation": "2017-05-04 11:52:40.941507",
  "doctype": "DocType",
  "document_type": "Document",
@@ -11,6 +11,7 @@
   "title",
   "status",
   "appointment_type",
+  "disable",
   "appointment_for",
   "column_break_1",
   "company",
@@ -69,7 +70,6 @@
    "fieldname": "patient",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
-   "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Patient",
    "options": "Patient",
@@ -78,13 +78,12 @@
    "set_only_once": 1
   },
   {
+   "default": "OPD",
    "fieldname": "appointment_type",
    "fieldtype": "Link",
-   "ignore_user_permissions": 1,
    "label": "Appointment Type",
    "options": "Appointment Type",
-   "reqd": 1,
-   "set_only_once": 1
+   "reqd": 1
   },
   {
    "fetch_from": "appointment_type.default_duration",
@@ -165,8 +164,6 @@
    "fieldname": "department",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Department",
    "mandatory_depends_on": "eval:doc.appointment_for==\"Department\"",
    "options": "Medical Department",
@@ -193,7 +190,6 @@
    "depends_on": "eval: doc.appointment_for == \"Practitioner\"",
    "fieldname": "appointment_time",
    "fieldtype": "Time",
-   "in_list_view": 1,
    "label": "Time",
    "mandatory_depends_on": "eval:doc.appointment_based_on_check_in == false && doc.appointment_for == \"Practitioner\";",
    "read_only": 1
@@ -238,6 +234,7 @@
    "search_index": 1
   },
   {
+   "default": "Cash",
    "fieldname": "mode_of_payment",
    "fieldtype": "Link",
    "label": "Mode of Payment",
@@ -416,16 +413,23 @@
    "fieldtype": "Column Break"
   },
   {
-    "fieldname": "service_request",
-    "fieldtype": "Link",
-    "label": "Service Request",
-    "options": "Service Request",
-    "read_only": 1,
-    "search_index": 1
+   "fieldname": "service_request",
+   "fieldtype": "Link",
+   "label": "Service Request",
+   "options": "Service Request",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "appointment_type.disable",
+   "fieldname": "disable",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Disable"
   }
  ],
  "links": [],
- "modified": "2023-06-10 13:39:03.455568",
+ "modified": "2024-03-19 10:03:43.206871",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Patient Appointment",

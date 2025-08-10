@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:HMS-WF-IPD-{#####}",
+ "creation": "2024-02-29 15:20:06.738441",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "posting_date",
+  "patient",
+  "date_of_birth",
+  "column_break_iwz1i",
+  "gender",
+  "uid",
+  "mobile",
+  "type",
+  "section_break_atqlr",
+  "surgery_name",
+  "column_break_ggg9g",
+  "speciality",
+  "doctor",
+  "section_break_5dbsm",
+  "surgery",
+  "section_break_kzckc",
+  "surgery_amount",
+  "admission_type",
+  "hospital",
+  "admission_type_assignment_child",
+  "admission_amount"
+ ],
+ "fields": [
+  {
+   "depends_on": "eval:doc.type == \"Surgery\"",
+   "fieldname": "surgery",
+   "fieldtype": "Table",
+   "label": "Surgery",
+   "options": "Surgery Child"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_date",
+   "fieldtype": "Datetime",
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient"
+  },
+  {
+   "fetch_from": "patient.dob",
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "label": "Date Of Birth"
+  },
+  {
+   "fetch_from": "patient.sex",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender"
+  },
+  {
+   "fetch_from": "patient.uid",
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "UID"
+  },
+  {
+   "fetch_from": "patient.mobile",
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "section_break_atqlr",
+   "fieldtype": "Section Break",
+   "label": "Surgery"
+  },
+  {
+   "fieldname": "column_break_iwz1i",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Surgery\"\r\n",
+   "fieldname": "surgery_name",
+   "fieldtype": "Link",
+   "label": "Surgery Name",
+   "options": "Surgery Name"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Surgery\"",
+   "fetch_from": "surgery_name.speciality",
+   "fieldname": "speciality",
+   "fieldtype": "Data",
+   "label": "Speciality"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Surgery\"",
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Doctor"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Admission\"",
+   "fieldname": "admission_type_assignment_child",
+   "fieldtype": "Table",
+   "label": "Admission Type Assignment Child",
+   "options": "Admission Type Assignment Child"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Admission\"",
+   "fieldname": "admission_type",
+   "fieldtype": "Link",
+   "label": "Admission Type",
+   "options": "Admission Type"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Admission\"",
+   "fieldname": "section_break_kzckc",
+   "fieldtype": "Section Break",
+   "label": "Admission"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Surgery\"",
+   "fieldname": "surgery_amount",
+   "fieldtype": "Float",
+   "label": "Surgery Amount"
+  },
+  {
+   "depends_on": "eval: doc.type == \"Admission\"",
+   "fieldname": "admission_amount",
+   "fieldtype": "Float",
+   "label": "Admission Amount"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Surgery\nAdmission"
+  },
+  {
+   "fieldname": "column_break_ggg9g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5dbsm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.type == \"Admission\"",
+   "fieldname": "hospital",
+   "fieldtype": "Link",
+   "label": "Hospital",
+   "options": "Hospital"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-03 14:46:54.970272",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "In-Patient Department",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

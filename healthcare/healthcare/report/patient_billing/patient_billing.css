@@ -1,0 +1,8 @@
+/* Customize the appearance of status fields */
+.help-account {
+    color: red;
+}
+
+.paid {
+    color: green;
+}

@@ -13,6 +13,7 @@
   "allow_booking_for",
   "column_break_jdo1",
   "color",
+  "disable",
   "billing_tab",
   "price_list",
   "items"
@@ -75,10 +76,16 @@
    "label": "Allow Booking For",
    "options": "Practitioner\nDepartment\nService Unit",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "disable",
+   "fieldtype": "Check",
+   "label": "Disable"
   }
  ],
  "links": [],
- "modified": "2023-06-10 13:43:27.137414",
+ "modified": "2024-03-07 10:15:12.640389",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Appointment Type",
