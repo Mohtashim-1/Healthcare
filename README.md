@@ -47,3 +47,4 @@ GNU GPL V3. See [license.txt](https://github.com/frappe/health/blob/develop/lice
 ### Credits
 
 Frappe Health module is initially developed by Earthians. Currently, it is developed & maintained by Frappe Team and community contributors.
+# Healthcare
